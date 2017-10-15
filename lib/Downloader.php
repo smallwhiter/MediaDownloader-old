@@ -191,8 +191,10 @@ class Downloader
 		
 		$cmd .= " ".$format_option;
 		$cmd .= " ".escapeshellarg($url);
-		
-		$cmd .= " --restrict-filenames"; // --restrict-filenames is for specials chars
+		$locale = 'fr_FR.UTF-8';
+		setlocale(LC_ALL, $locale);
+		putenv('LC_ALL='.$locale);
+		//$cmd .= " --restrict-filenames"; // --restrict-filenames is for specials chars
 		$cmd .= " > /dev/null & echo $!";
 	
 		shell_exec($cmd);
