@@ -36,9 +36,9 @@
 						<div class="list-group-item">
 							<label for="quality" class="h4 list-group-item-heading">Quality:</label>
 							<select name="quality" class="list-group-item-text">
-							<option value="<?php echo QualityEnum::Best; ?>" selected>Best</option>
+							<option value="<?php echo QualityEnum::Best_ever; ?>" selected>Best ever</option>
 							<option value="<?php echo QualityEnum::Worst; ?>">Worst</option>
-							<option value="<?php echo QualityEnum::Best_ever; ?>">Best ever</option>
+							<option value="<?php echo QualityEnum::Best; ?>">Best</option>
 							<option value="<?php echo QualityEnum::Manual; ?>">Let me choose</option>
 							</select>
 						</div>
