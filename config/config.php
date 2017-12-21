@@ -2,7 +2,7 @@
 
 $CONFIG = array (
 	// Enable password restriction (boolean)
-	'security' => true,
+	'security' => false,
 		
 	// MD5 hash of choosen password. Default is 'root'. (string)
 	'password' => '63a9f0ea7bb98050796b649e85481845',
@@ -14,7 +14,7 @@ $CONFIG = array (
 	'post_processor' => 'avconv',
 		
 	// Maximum simultaneous server downloads limit. Set to 0 to disable limit. (integer)
-	'max_dl' => 3
+	'max_dl' => 20
 );
 
 ?>
