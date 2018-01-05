@@ -13,7 +13,7 @@
 	Views\Header::PrintView();
 ?>
 		<div class="container">
-			<h1>Download</h1>
+			<h1>开始下载</h1>
 			
 <?php
 	Utils\Error::getInstance()->PrintErrors();
@@ -22,52 +22,52 @@
 			<form id="download-form" class="form-horizontal" action="download.php" method="post">					
 				<div class="form-group">
 					<div class="col-md-10">
-						<textarea class="form-control" id="url" name="urls" placeholder="One URL per line" rows="6"><?php echo empty($_POST['urls']) ? '' : $_POST['urls']; ?></textarea>
+						<textarea class="form-control" id="url" name="urls" placeholder="输入Youtube链接" rows="6"><?php echo empty($_POST['urls']) ? '' : $_POST['urls']; ?></textarea>
 					</div>
 					<div class="col-md-2">
 						<div class="list-group-item">
 							<label for="stream" class="h4 list-group-item-heading">Stream:</label>
 							<select name="stream" class="list-group-item-text">
-								<option value="<?php echo StreamEnum::Both; ?>" selected>Audio and Video</option>
-								<option value="<?php echo StreamEnum::Audio_only; ?>">Audio only</option>
-								<option value="<?php echo StreamEnum::Video_only; ?>">Video only</option>
+								<option value="<?php echo StreamEnum::Both; ?>" selected>音频和视频</option>
+								<option value="<?php echo StreamEnum::Audio_only; ?>">仅音频</option>
+								<option value="<?php echo StreamEnum::Video_only; ?>">仅视频</option>
 							</select>
 						</div>
 						<div class="list-group-item">
 							<label for="quality" class="h4 list-group-item-heading">Quality:</label>
 							<select name="quality" class="list-group-item-text">
-							<option value="<?php echo QualityEnum::Best_ever; ?>" selected>Best ever</option>
-							<option value="<?php echo QualityEnum::Worst; ?>">Worst</option>
-							<option value="<?php echo QualityEnum::Best; ?>">Best</option>
-							<option value="<?php echo QualityEnum::Manual; ?>">Let me choose</option>
+							<option value="<?php echo QualityEnum::Best; ?>" selected>720P</option>
+							<option value="<?php echo QualityEnum::Worst; ?>">144P</option>
+							<option value="<?php echo QualityEnum::Best_ever; ?>">1080P</option>
+							<option value="<?php echo QualityEnum::Manual; ?>">自行选择</option>
 							</select>
 						</div>
 					</div>
 				</div>
-				<button type="submit" class="btn btn-primary" name="download" value="indirect">Download</button>
-				<button type="submit" class="btn btn-default" name="download" value="direct">Direct Download</button>
+				<button type="submit" class="btn btn-primary" name="download" value="indirect">直接下载</button>
+				<button type="submit" class="btn btn-default" name="download" value="direct">视频直链</button>
 			</form>
 			<br>
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="panel panel-info">
-						<div class="panel-heading"><h3 class="panel-title">Info</h3></div>
+						<div class="panel-heading"><h3 class="panel-title">信息</h3></div>
 						<div class="panel-body">
-							<p>Free space : <b><?php echo FileHandler::free_space(); ?></b></p>
-							<p>Download folder : <?php echo Utils\Config::Get('output_folder_url'); ?></p>
+							<p>剩余空间 : <b><?php echo FileHandler::free_space(); ?></b></p>
+							<p>下载目录 : <?php echo Utils\Config::Get('output_folder_url'); ?></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="panel panel-info">
-						<div class="panel-heading"><h3 class="panel-title">Help</h3></div>
+						<div class="panel-heading"><h3 class="panel-title">帮助</h3></div>
 						<div class="panel-body">
-							<p><b>How does it work ?</b></p>
+							<p><b>它是怎如何工作 ?</b></p>
 							<p>Simply paste your video link(s) in the field and click "Download"</p>
-							<p><b>With which sites does it work?</b></p>
-							<p><a href="http://rg3.github.io/youtube-dl/supportedsites.html">Here's</a> a list of the supported sites</p>
-							<p><b>How can I download the video on my computer?</b></p>
-							<p>Go to <a href="./list.php">Files</a> -> choose one -> right click on the link -> "Save target as ..." </p>
+							<p><b>那些网站能够使用它 ?</b></p>
+							<p><a href="http://rg3.github.io/youtube-dl/supportedsites.html">这儿是</a> 受支持的网站列表</p>
+							<p><b>如何下载视频到自己的电脑 ?</b></p>
+							<p>前往 <a href="./list.php"> 文件列表 </a> -> 选定一个 -> 右键选择链接 -> "目标保存为 ..." </p>
 						</div>
 					</div>
 				</div>
