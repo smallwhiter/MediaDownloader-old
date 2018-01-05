@@ -37,8 +37,8 @@ abstract class Header
 			echo '
 			<div class="navbar-collapse collapse navbar-responsive-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="./index.php">Download</a></li>
-					<li><a href="./list.php">Files</a></li>
+					<li><a href="./index.php">下载</a></li>
+					<li><a href="./list.php">文件列表</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 							'.(Downloader::background_jobs() > 0 ? '<b>' : '').'Background downloads : '.Downloader::background_jobs().' / '.Downloader::max_background_jobs().(Downloader::background_jobs() > 0 ? '</b>' : '').' <span class="caret"></span></a>
