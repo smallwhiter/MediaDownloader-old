@@ -29,16 +29,16 @@ Views\Header::PrintView();
 			else
 			{
 		?>
-			<h2>List of downloaded files :</h2>
-			<p>Action to apply on selected files :</p>
+			<h2>已下载文件列表 :</h2>
+			<p>对所选文件应用操作 :</p>
 			<form action="list.php" method="post">
 				<input type="submit" class="btn btn-danger btn-sm" name="action" value="Delete" />
 				<table class="table table-striped table-hover ">
 					<thead>
 						<tr>
 							<th style="width:30px"><input type="checkbox" onClick="toggle(this);" /></th>
-							<th style="">Title</th>
-							<th style="width:80px">Size</th>
+							<th style="">标题</th>
+							<th style="width:80px">大小</th>
 						</tr>
 					</thead>
 					<tbody>
