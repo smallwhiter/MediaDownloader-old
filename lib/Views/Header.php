@@ -41,7 +41,7 @@ abstract class Header
 					<li><a href="./list.php">文件列表</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-							'.(Downloader::background_jobs() > 0 ? '<b>' : '').'Background downloads : '.Downloader::background_jobs().' / '.Downloader::max_background_jobs().(Downloader::background_jobs() > 0 ? '</b>' : '').' <span class="caret"></span></a>
+							'.(Downloader::background_jobs() > 0 ? '<b>' : '').'后台任务 : '.Downloader::background_jobs().' / '.Downloader::max_background_jobs().(Downloader::background_jobs() > 0 ? '</b>' : '').' <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">';
 
 			if(Downloader::get_current_background_jobs() != null)
@@ -50,20 +50,20 @@ abstract class Header
 				{
 					if (strpos($key['cmd'], '-x') !== false) //Music
 					{
-						echo "<li><a href=\"#\"><i class=\"fa fa-music\"></i> Elapsed time : ".$key['time']."</a></li>";
+						echo "<li><a href=\"#\"><i class=\"fa fa-music\"></i> 剩余时间 : ".$key['time']."</a></li>";
 					}
 					else
 					{
-						echo "<li><a href=\"#\"><i class=\"fa fa-video-camera\"></i> Elapsed time : ".$key['time']."</a></li>";
+						echo "<li><a href=\"#\"><i class=\"fa fa-video-camera\"></i> 剩余时间 : ".$key['time']."</a></li>";
 					}
 				}
 
 				echo "<li class=\"divider\"></li>";
-				echo "<li><a href=\"./index.php?kill=all\">Kill all downloads</a></li>";
+				echo "<li><a href=\"./index.php?kill=all\"> 结束所有的任务 </a></li>";
 			}
 			else
 			{
-				echo "<li><a>No jobs !</a></li>";
+				echo "<li><a>无任务</a></li>";
 			}
 
 			echo '
