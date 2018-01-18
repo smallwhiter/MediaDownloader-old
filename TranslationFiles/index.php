@@ -36,9 +36,9 @@
 						<div class="list-group-item">
 							<label for="quality" class="h4 list-group-item-heading">Quality:</label>
 							<select name="quality" class="list-group-item-text">
-							<option value="<?php echo QualityEnum::Best; ?>" selected>720P</option>
+							<option value="<?php echo QualityEnum::Best_ever; ?>" selected>1080P</option>
+							<option value="<?php echo QualityEnum::Best; ?>">720P</option>
 							<option value="<?php echo QualityEnum::Worst; ?>">144P</option>
-							<option value="<?php echo QualityEnum::Best_ever; ?>">1080P</option>
 							<option value="<?php echo QualityEnum::Manual; ?>">自行选择</option>
 							</select>
 						</div>
