@@ -42,8 +42,8 @@ echo -n root|md5sum| sed 's/ .*//'
 [Lumen](https://bootswatch.com/lumen/)
 
 ## Screenshots
-![Main](https://github.com/Kallys/MediaDownloader/raw/master/img/main.png)
-![List](https://github.com/Kallys/MediaDownloader/raw/master/img/list.png)
+![Main](https://github.com/smallwhiter/MediaDownloader-old/raw/master/MediaDownloader-old.PNG)
+
 
 ## Credits
 Thanks for p1rox's nice project "[Youtube-dl WebUI](https://github.com/p1rox/Youtube-dl-WebUI)" from which Media Downloader is forked.
