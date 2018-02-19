@@ -54,23 +54,10 @@
 						<div class="panel-heading"><h3 class="panel-title">信息</h3></div>
 						<div class="panel-body">
 							<p>剩余空间 : <b><?php echo FileHandler::free_space(); ?></b></p>
-							<p>下载目录 : <?php echo Utils\Config::Get('output_folder_url'); ?></p>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6">
-					<div class="panel panel-info">
-						<div class="panel-heading"><h3 class="panel-title">帮助</h3></div>
-						<div class="panel-body">
-							<p><b>它是怎如何工作 ?</b></p>
-							<p>Simply paste your video link(s) in the field and click "Download"</p>
-							<p><b>那些网站能够使用它 ?</b></p>
-							<p><a href="http://rg3.github.io/youtube-dl/supportedsites.html">这儿是</a> 受支持的网站列表</p>
-							<p><b>如何下载视频到自己的电脑 ?</b></p>
-							<p>前往 <a href="./list.php"> 文件列表 </a> -> 选定一个 -> 右键选择链接 -> "目标保存为 ..." </p>
-						</div>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 
